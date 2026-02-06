@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Relatório de Ocorrências de Alunos</title>
+  <!-- Importa o CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Relatório de Ocorrência de Alunos</h1>
+  <form id="formTurma">
+    <!-- Nome -->
+    <div class="form-group">
+      <label for="nome">Seu nome:</label>
+      <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+    </div>
+
+    <!-- Cargo -->
+    <div class="form-group">
+      <label for="funcao">Cargo:</label>
+      <select id="funcao" name="funcao" required>
+        <option value="">Selecione...</option>
+        <option value="professor">Professor</option>
+        <option value="agente">Agente de Organização</option>
+        <option value="coordenador">Coordenador</option>
+        <option value="vice-diretor">Vice-Diretor</option>
+        <option value="diretor">Diretor</option>
+      </select>
+    </div>
+
+    <!-- Período -->
+    <div class="form-group">
+      <label for="periodo">Selecione o Período:</label>
+      <select id="periodo" name="periodo" required>
+        <option value="">Selecione...</option>
+        <option value="manha">Manhã</option>
+        <option value="tarde">Tarde</option>
+        <option value="noite">Noite</option>
+      </select>
+    </div>
+
+    <!-- Turmas -->
+    <div class="form-group hidden" id="turmaGroup">
+      <label for="turma">Turma:</label>
+      <select id="turma" name="turma" required>
+        <option value="">Selecione...</option>
+      </select>
+    </div>
+
+    <!-- Lista de alunos -->
+    <div class="form-group hidden" id="alunosGroup">
+      <label>Alunos:</label>
+      <div class="alunos" id="listaAlunos"></div>
+    </div>
+
+    <!-- Ocorrido -->
+    <div class="form-group hidden" id="ocorridoGroup">
+      <label for="ocorrido">Descrição do ocorrido:</label>
+      <textarea id="ocorrido" name="ocorrido" rows="4" cols="50" placeholder="Descreva o ocorrido..." required></textarea>
+    </div>
+
+    <!-- Providências -->
+    <div class="form-group hidden" id="providenciasGroup">
+      <label for="providencias">Providências tomadas:</label>
+      <textarea id="providencias" name="providencias" rows="4" cols="50" placeholder="Informe as providências tomadas..." required></textarea>
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <pre id="resultado"></pre>
+
+  <!-- Importa o JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
