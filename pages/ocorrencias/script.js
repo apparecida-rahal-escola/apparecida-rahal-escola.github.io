@@ -9,6 +9,20 @@ const listaAlunos = document.getElementById('listaAlunos');
 const ocorridoGroup = document.getElementById('ocorridoGroup');
 const providenciasGroup = document.getElementById('providenciasGroup');
 
+const dataInput = document.getElementById('data').value; // supondo que seja um <input type="date">
+const partes = dataInput.split("/"); // se vier como DD/MM/YYYY
+const dataISO = `${partes[2]}-${partes[1]}-${partes[0]}`; // YYYY-MM-DD
+const payload = {
+ nome: document.getElementById('nome').value,
+ funcao: document.getElementById('funcao').value,
+ data: dataISO, // já convertido
+ periodo: periodoSelect.value,
+ turma: turmaSelect.value,
+ alunos: Array.from(listaAlunos.selectedOptions).map(opt => opt.value),
+ ocorrido: document.getElementById('ocorrido').value,
+ providencias: document.getElementById('providencias').value
+};
+
 // Turmas por período
 const turmasPorPeriodo = {
   Manhã: 
