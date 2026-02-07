@@ -204,6 +204,7 @@ document.getElementById('formTurma').addEventListener('submit', function(e) {
   const dados = {
     nome: document.getElementById('nome').value,
     funcao: document.getElementById('funcao').value,
+    data: document.getElementById('data').value,
     periodo: document.getElementById('periodo').value,
     turma: document.getElementById('turma').value,
     alunos: alunosSelecionados,
