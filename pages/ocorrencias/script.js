@@ -11,11 +11,11 @@ const providenciasGroup = document.getElementById('providenciasGroup');
 
 // Turmas por período
 const turmasPorPeriodo = {
-  manha: 
+  Manhã: 
   ["9º Ano A", "9º Ano B", "9º Ano C", "9º Ano D", "9º Ano E", "1ª Série A", "1ª Série B", "1ª Série C", "1ª Série D", "2ª Série A - Técnico", "2ª Série B", "2ª Série C", "2ª Série D", "2ª Série E - Técnico","3ª Série A - Técnico"],
-  tarde: 
+  Tarde: 
   ["6º Ano A", "6º Ano B","6º Ano C","6º Ano D","6º Ano E","7º Ano A","7º Ano B","7º Ano C","7º Ano D","8º Ano A","8º Ano B","8º Ano C","8º Ano D","8º Ano E"],
-  noite:
+  Noite:
   ["3ª Série A", "3ª Série B", "3ª Série C", "3ª Série D", "3ª Série E", "3ª Série F", "3ª Série G"]
 };
 
